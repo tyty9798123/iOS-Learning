@@ -15,28 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aFD-6u-bOV">
-                                <rect key="frame" x="16" y="44" width="315" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KL-bd-ngX">
+                                <rect key="frame" x="182.33333333333334" y="200.66666666666666" width="10.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEv-Vl-QOv">
-                                <rect key="frame" x="8" y="109" width="147" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="按鈕一號"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-vK-wPH">
+                                <rect key="frame" x="162" y="391" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="btn1Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="098-cN-oTr"/>
+                                    <action selector="plusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLe-2R-rwZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0KL-bd-ngX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="68b-fE-EzH"/>
+                            <constraint firstItem="SVu-vK-wPH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WCz-xx-L9E"/>
+                            <constraint firstItem="SVu-vK-wPH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cvF-ky-W65"/>
+                            <constraint firstItem="0KL-bd-ngX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-200" id="t24-ax-WwQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btn1" destination="mEv-Vl-QOv" id="a0a-IX-Nw6"/>
-                        <outlet property="label1" destination="aFD-6u-bOV" id="B3f-ss-XNq"/>
+                        <outlet property="counterLabel" destination="0KL-bd-ngX" id="Y3U-hI-LVO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

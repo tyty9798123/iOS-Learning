@@ -10,24 +10,26 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var label1: UILabel!
-    @IBOutlet weak var btn1: UIButton!
-
+    var counter = 0;
+    @IBOutlet weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        print("View controller view Did Load")
-        
-        label1.text = "Progress Bar iOS Swift"
-        btn1.setTitle("系統確認中...請稍等", for: .disabled)
+        counterLabel.text = "\(counter)"
     }
 
-    @IBAction func btn1Clicked(_ sender: UIButton) {
-        print("Clicked1")
-        btn1.isEnabled = false
-
+    @IBAction func plusOne(_ sender: UIButton) {
+        /*
+        第一種寫法：
+        if let number = counterLabel.text {
+            if var intNumber = Int(number) {
+                intNumber += 1;
+                counterLabel.text = "\(intNumber)"
+            }
+        }
+        */
+        counter += 1
+        counterLabel.text = "\(counter)"
     }
     
 }
-
