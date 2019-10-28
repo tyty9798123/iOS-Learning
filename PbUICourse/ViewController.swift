@@ -32,4 +32,15 @@ class ViewController: UIViewController {
         counterLabel.text = "\(counter)"
     }
     
+    
+    @IBAction func minusOne(_ sender: UIButton) {
+        counter -= 1
+        counterLabel.text = "\(counter)"
+    }
+    
+    @IBAction func resetCounter(_ sender: Any) {
+        counter = 0
+        counterLabel.text = "\(counter)"
+    }
+    
 }

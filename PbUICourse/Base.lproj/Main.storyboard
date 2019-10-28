@@ -21,20 +21,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVu-vK-wPH">
-                                <rect key="frame" x="162" y="391" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOb-13-Uue">
+                                <rect key="frame" x="170" y="496" width="35" height="30"/>
+                                <state key="normal" title="reset"/>
                                 <connections>
-                                    <action selector="plusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nLe-2R-rwZ"/>
+                                    <action selector="resetCounter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="drw-Vz-cUt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cB2-Fg-sd1">
+                                <rect key="frame" x="84.666666666666671" y="396" width="46.000000000000014" height="30"/>
+                                <state key="normal" title="-1"/>
+                                <connections>
+                                    <action selector="minusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLA-qB-YPs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJ1-g5-mRU">
+                                <rect key="frame" x="244.66666666666663" y="396" width="46" height="30"/>
+                                <state key="normal" title="+1"/>
+                                <connections>
+                                    <action selector="plusOne:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2mM-9R-tAF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="GOb-13-Uue" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2aY-PM-cyy"/>
                             <constraint firstItem="0KL-bd-ngX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="68b-fE-EzH"/>
-                            <constraint firstItem="SVu-vK-wPH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="WCz-xx-L9E"/>
-                            <constraint firstItem="SVu-vK-wPH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cvF-ky-W65"/>
+                            <constraint firstItem="cB2-Fg-sd1" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GLG-3a-GNW"/>
+                            <constraint firstItem="cB2-Fg-sd1" firstAttribute="centerY" secondItem="lJ1-g5-mRU" secondAttribute="centerY" id="KYC-rX-ich"/>
+                            <constraint firstItem="cB2-Fg-sd1" firstAttribute="height" secondItem="lJ1-g5-mRU" secondAttribute="height" id="Rnp-rk-kSg"/>
+                            <constraint firstItem="lJ1-g5-mRU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Wuo-mY-KV1"/>
+                            <constraint firstItem="GOb-13-Uue" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="100" id="eZy-TC-NDa"/>
+                            <constraint firstItem="lJ1-g5-mRU" firstAttribute="leading" secondItem="cB2-Fg-sd1" secondAttribute="trailing" constant="114" id="iG2-Mv-eQz"/>
+                            <constraint firstItem="cB2-Fg-sd1" firstAttribute="width" secondItem="lJ1-g5-mRU" secondAttribute="width" id="miF-37-m6b"/>
                             <constraint firstItem="0KL-bd-ngX" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-200" id="t24-ax-WwQ"/>
+                            <constraint firstItem="cB2-Fg-sd1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-80" id="tnB-a2-XNX"/>
+                            <constraint firstItem="lJ1-g5-mRU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="80" id="vTr-d4-uzq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
