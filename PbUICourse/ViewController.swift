@@ -11,14 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     var counter = 0;
-    //@IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var counterLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //counterLabel.text = "\(counter)"
     }
 
-    /*
+    
     @IBAction func plusOne(_ sender: UIButton) {
         /*
         第一種寫法：
@@ -43,5 +43,5 @@ class ViewController: UIViewController {
         counter = 0
         counterLabel.text = "\(counter)"
     }
-    */
+    
 }
