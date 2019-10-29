@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82E-Cs-ICE">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -15,19 +15,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6TN-gi-fg4">
-                                <rect key="frame" x="112" y="181" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAz-4v-D8j">
+                                <rect key="frame" x="172.33333333333334" y="181" width="30.666666666666657" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB9-l8-9VH">
+                                <rect key="frame" x="154" y="496" width="67" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" title="Reset"/>
                                 <connections>
-                                    <action selector="dismissViewControllerByButton:" destination="82E-Cs-ICE" eventType="touchUpInside" id="JdS-tn-0JD"/>
+                                    <action selector="resetButtonClicked:" destination="82E-Cs-ICE" eventType="touchUpInside" id="ON1-gR-Z8T"/>
                                 </connections>
                             </button>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="myC-xz-Uyt">
+                                <rect key="frame" x="140" y="733" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stepperClicked:" destination="82E-Cs-ICE" eventType="valueChanged" id="DO5-Hx-Lcp"/>
+                                </connections>
+                            </stepper>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fAz-4v-D8j" firstAttribute="centerY" secondItem="BWN-bw-7Jq" secondAttribute="centerY" constant="-200" id="AyV-O9-Qn1"/>
+                            <constraint firstItem="ZB9-l8-9VH" firstAttribute="centerX" secondItem="BWN-bw-7Jq" secondAttribute="centerX" id="W00-dE-On0"/>
+                            <constraint firstItem="ZB9-l8-9VH" firstAttribute="top" secondItem="fAz-4v-D8j" secondAttribute="bottom" constant="255" id="aM5-vK-VfF"/>
+                            <constraint firstItem="fAz-4v-D8j" firstAttribute="centerX" secondItem="BWN-bw-7Jq" secondAttribute="centerX" id="omB-1e-sYi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="BWN-bw-7Jq"/>
                     </view>
                     <navigationItem key="navigationItem" id="vPH-FX-tTr"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="fAz-4v-D8j" id="yv8-qr-I64"/>
+                        <outlet property="stepper1" destination="myC-xz-Uyt" id="A9T-87-9gq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3r-gN-WnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,9 +77,6 @@
                                         <rect key="frame" x="255" y="43" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="82E-Cs-ICE" kind="show" id="bEi-Jx-nbD"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
