@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="82E-Cs-ICE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w5S-2h-efF">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -55,6 +55,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F3r-gN-WnX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042" y="-214"/>
+        </scene>
+        <!--Image Test Controller-->
+        <scene sceneID="GLL-KQ-Ymb">
+            <objects>
+                <viewController id="w5S-2h-efF" customClass="ImageTestController" customModule="PbUICourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IJa-Dj-Zf2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anj-KD-hOT">
+                                <rect key="frame" x="0.0" y="223.66666666666663" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="anj-KD-hOT" secondAttribute="height" id="DKL-hb-92M"/>
+                                </constraints>
+                                <state key="normal" image="cat"/>
+                                <connections>
+                                    <action selector="phoneCallClicked:" destination="w5S-2h-efF" eventType="touchUpInside" id="DqP-3z-dbb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="anj-KD-hOT" firstAttribute="width" secondItem="XbF-EO-g9p" secondAttribute="width" id="72o-72-FKq"/>
+                            <constraint firstItem="anj-KD-hOT" firstAttribute="centerY" secondItem="XbF-EO-g9p" secondAttribute="centerY" id="beF-dN-vPU"/>
+                            <constraint firstItem="anj-KD-hOT" firstAttribute="centerX" secondItem="XbF-EO-g9p" secondAttribute="centerX" id="yJj-Xa-3IC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XbF-EO-g9p"/>
+                    </view>
+                    <connections>
+                        <outlet property="phoneCallButton" destination="anj-KD-hOT" id="pS6-1y-r0K"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7x-qo-6ZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="169" y="-923"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -159,4 +194,7 @@
             <point key="canvasLocation" x="130" y="-213"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat" width="2772" height="3698"/>
+    </resources>
 </document>
