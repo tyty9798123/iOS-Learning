@@ -15,11 +15,13 @@ class ImageTestController: UIViewController {
 
     }
     
-    @IBAction func imageViewClicked(_ sender: UITapGestureRecognizer) {
-        print("imageClicked")
-        print("\(sender.view)")
-        // sender.view = imageView
-        print("\(sender.state == .ended)") //return true
-        // ended = 按完了
+    @IBAction func imageClicked(_ sender: UIButton) {
+        if let superView = sender.superview {
+            superView.alpha = 0.5
+            UIView.animate(withDuration: 0.1){
+                superView.alpha = 1
+            }
+        }
     }
+    
 }

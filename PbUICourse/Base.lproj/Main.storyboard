@@ -64,32 +64,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lhd-he-eZ2">
-                                <rect key="frame" x="0.0" y="225" width="375" height="373"/>
-                                <gestureRecognizers/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xZ-br-BhT">
+                                <rect key="frame" x="106" y="329.66666666666669" width="163" height="163"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat" translatesAutoresizingMaskIntoConstraints="NO" id="Oo2-34-6eX">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="163"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="biL-8g-Mlw">
+                                        <rect key="frame" x="0.0" y="0.0" width="163" height="163"/>
+                                        <connections>
+                                            <action selector="imageClicked:" destination="w5S-2h-efF" eventType="touchUpInside" id="YeI-zN-OyY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="lhd-he-eZ2" secondAttribute="height" id="IzU-WR-hCS"/>
+                                    <constraint firstItem="Oo2-34-6eX" firstAttribute="height" secondItem="5xZ-br-BhT" secondAttribute="height" id="4V1-xD-vpo"/>
+                                    <constraint firstItem="Oo2-34-6eX" firstAttribute="centerY" secondItem="5xZ-br-BhT" secondAttribute="centerY" id="Gee-Vp-DOb"/>
+                                    <constraint firstItem="biL-8g-Mlw" firstAttribute="centerY" secondItem="Oo2-34-6eX" secondAttribute="centerY" id="ILp-SK-w7s"/>
+                                    <constraint firstAttribute="width" secondItem="5xZ-br-BhT" secondAttribute="height" id="PUQ-pi-IaY"/>
+                                    <constraint firstItem="Oo2-34-6eX" firstAttribute="width" secondItem="5xZ-br-BhT" secondAttribute="width" id="Qnu-SP-Mpr"/>
+                                    <constraint firstItem="biL-8g-Mlw" firstAttribute="centerX" secondItem="Oo2-34-6eX" secondAttribute="centerX" id="Xcj-nY-wUc"/>
+                                    <constraint firstItem="Oo2-34-6eX" firstAttribute="centerX" secondItem="5xZ-br-BhT" secondAttribute="centerX" id="ig9-pn-fqh"/>
+                                    <constraint firstItem="biL-8g-Mlw" firstAttribute="height" secondItem="5xZ-br-BhT" secondAttribute="height" id="j44-OH-wMT"/>
+                                    <constraint firstItem="biL-8g-Mlw" firstAttribute="width" secondItem="5xZ-br-BhT" secondAttribute="width" id="uqI-br-zZr"/>
                                 </constraints>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="HCW-mn-vWg" appends="YES" id="W0L-sY-bLf"/>
-                                </connections>
-                            </imageView>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lhd-he-eZ2" firstAttribute="centerX" secondItem="XbF-EO-g9p" secondAttribute="centerX" id="Sf4-Md-Qx6"/>
-                            <constraint firstItem="lhd-he-eZ2" firstAttribute="centerY" secondItem="XbF-EO-g9p" secondAttribute="centerY" id="ujT-Wk-wAT"/>
-                            <constraint firstItem="lhd-he-eZ2" firstAttribute="width" secondItem="XbF-EO-g9p" secondAttribute="width" id="vqB-zR-W4s"/>
+                            <constraint firstItem="5xZ-br-BhT" firstAttribute="centerX" secondItem="XbF-EO-g9p" secondAttribute="centerX" id="9dn-67-CTg"/>
+                            <constraint firstItem="XbF-EO-g9p" firstAttribute="trailing" secondItem="5xZ-br-BhT" secondAttribute="trailing" constant="106" id="KsV-C3-plQ"/>
+                            <constraint firstItem="5xZ-br-BhT" firstAttribute="centerY" secondItem="XbF-EO-g9p" secondAttribute="centerY" id="feP-Oe-3N4"/>
+                            <constraint firstItem="5xZ-br-BhT" firstAttribute="leading" secondItem="XbF-EO-g9p" secondAttribute="leading" constant="106" id="l5s-T7-l0u"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XbF-EO-g9p"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7x-qo-6ZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="HCW-mn-vWg">
-                    <connections>
-                        <action selector="imageViewClicked:" destination="w5S-2h-efF" id="YyB-ZX-4Ao"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="169" y="-923"/>
         </scene>
@@ -197,6 +209,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="phone" catalog="system" width="64" height="56"/>
+        <image name="cat" width="2772" height="3698"/>
     </resources>
 </document>
