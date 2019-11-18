@@ -10,15 +10,16 @@ import UIKit
 
 class ImageTestController: UIViewController {
 
-    @IBOutlet weak var phoneCallButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // phoneCallButton.imageView?.contentMode = .center
-        phoneCallButton.imageView?.contentMode = .scaleAspectFit
+
     }
     
-    @IBAction func phoneCallClicked(_ sender: UIView) {
-        
+    @IBAction func imageViewClicked(_ sender: UITapGestureRecognizer) {
+        print("imageClicked")
+        print("\(sender.view)")
+        // sender.view = imageView
+        print("\(sender.state == .ended)") //return true
+        // ended = 按完了
     }
 }
