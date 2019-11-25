@@ -12,6 +12,10 @@ class TestTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(
+            UINib(nibName: "PBTestTableViewCell", bundle: nil),
+            forCellReuseIdentifier: "reuseIdentifier")
+
          // self.tableView.backgroundColor = .blue;
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -35,17 +39,17 @@ class TestTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
         
-        let red = Double(indexPath.row) / 100.0
-        let green = Double(indexPath.row) / 200.0
-        let blue = Double(indexPath.row) / 150.0
-
-        // Configure the cell...
-        // RGB  
-        cell.backgroundColor = UIColor.init(displayP3Red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1)
+        if let customizedCell = cell as? PBTestTableViewCell{
+            customizedCell.titleLabel.text = "row: \(indexPath.row)"
+            customizedCell.contentLabel.text = "This is content."
+        }
         return cell
     }
+    /*
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(300);
+    }*/
     
 
     /*
