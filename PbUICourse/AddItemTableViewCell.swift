@@ -8,15 +8,21 @@
 
 import UIKit
 
+public protocol AddItemTableViewCellDelegate : NSObjectProtocol{
+    func addItem(newName: String)
+}
+
 class AddItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
     @IBOutlet weak var nameTextField: UITextField!
-    
+    weak open var delegate: AddItemTableViewCellDelegate?
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
         nameTextField.delegate = self
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,10 +39,16 @@ class AddItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     @IBAction func addItem(_ sender: UIButton) {
-        let newName = nameTextField.text
+        if let newName = nameTextField.text{
+            /*
+            if let tablecviewController = self.delegate{
+                tablecviewController.addItem(newName: newName)
+            }*/
+            
+            self.delegate?.addItem(newName: newName)
+        }
         nameTextField.text = ""
         nameTextField.resignFirstResponder()
-        print(newName)
     }
     
 }

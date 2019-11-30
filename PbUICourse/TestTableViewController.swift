@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestTableViewController: UITableViewController {
+class TestTableViewController: UITableViewController, AddItemTableViewCellDelegate {
 
     var array : [String] = [];
     override func viewDidLoad() {
@@ -53,9 +53,11 @@ class TestTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if (indexPath.section == 0){
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AddItemTableViewCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AddItemTableViewCell", for: indexPath) as! AddItemTableViewCell
+            cell.delegate = self
+
             return cell
-        }
+        } 
         else if (indexPath.section == 1){
             let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
             if let customizedCell = cell as? PBTestTableViewCell{
@@ -117,6 +119,13 @@ class TestTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .insert
+    }
+    
+    func addItem(newName: String){
+        array.append(newName)
+        tableView.insertRows(
+        at: [IndexPath(item: array.count-1, section: 1)],
+        with: .fade)
     }
     /*
     // Override to support rearranging the table view.
