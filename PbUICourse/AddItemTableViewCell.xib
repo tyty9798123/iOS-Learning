@@ -31,24 +31,24 @@
                                 <rect key="frame" x="276" y="15" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAN-KU-i9J">
-                                <rect key="frame" x="266" y="17" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VHE-QP-zkX">
+                                <rect key="frame" x="266" y="17" width="46" height="34"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <action selector="UIButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HnH-uJ-lAz"/>
-                                    <action selector="addItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="e6j-Dt-JYb"/>
+                                    <action selector="addItem:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="M8O-T4-IxU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="pAN-KU-i9J" secondAttribute="bottom" constant="13" id="3aG-8s-ext"/>
                             <constraint firstItem="fS4-eX-rR3" firstAttribute="leading" secondItem="Vam-Mz-UNQ" secondAttribute="leading" constant="8" id="4sa-YY-9s0"/>
-                            <constraint firstItem="pAN-KU-i9J" firstAttribute="top" secondItem="Vam-Mz-UNQ" secondAttribute="top" constant="17" id="DsM-19-WES"/>
-                            <constraint firstAttribute="trailing" secondItem="pAN-KU-i9J" secondAttribute="trailing" constant="8" id="IYb-BA-4JM"/>
+                            <constraint firstAttribute="trailing" secondItem="VHE-QP-zkX" secondAttribute="trailing" constant="8" id="6LT-lw-gmZ"/>
+                            <constraint firstItem="VHE-QP-zkX" firstAttribute="height" secondItem="fS4-eX-rR3" secondAttribute="height" id="B6X-j6-49B"/>
                             <constraint firstAttribute="bottom" secondItem="fS4-eX-rR3" secondAttribute="bottom" constant="13" id="ZWD-e1-BEu"/>
-                            <constraint firstItem="pAN-KU-i9J" firstAttribute="leading" secondItem="fS4-eX-rR3" secondAttribute="trailing" constant="8" id="iB8-ED-d2P"/>
+                            <constraint firstAttribute="bottom" secondItem="VHE-QP-zkX" secondAttribute="bottom" constant="9" id="bgY-av-UYe"/>
                             <constraint firstAttribute="height" priority="750" constant="60" id="iWS-ty-mKX"/>
+                            <constraint firstItem="VHE-QP-zkX" firstAttribute="leading" secondItem="fS4-eX-rR3" secondAttribute="trailing" constant="8" id="oUK-7W-ZkV"/>
+                            <constraint firstItem="VHE-QP-zkX" firstAttribute="top" secondItem="Vam-Mz-UNQ" secondAttribute="top" constant="17" id="r8V-zY-oLM"/>
                             <constraint firstItem="fS4-eX-rR3" firstAttribute="top" secondItem="Vam-Mz-UNQ" secondAttribute="top" constant="13" id="sjv-QM-mLd"/>
                         </constraints>
                     </view>
@@ -62,7 +62,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="nameTextFiled" destination="fS4-eX-rR3" id="1Pp-QW-q2r"/>
+                <outlet property="nameTextField" destination="fS4-eX-rR3" id="kJK-au-SeH"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="141.29464285714286"/>
         </tableViewCell>

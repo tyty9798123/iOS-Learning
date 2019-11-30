@@ -2,19 +2,21 @@
 //  AddItemTableViewCell.swift
 //  PbUICourse
 //
-//  Created by 劉謹賢 on 2019/11/25.
-//  Copyright © 2019 劉謹賢. All rights reserved.
+//  Created by Swift on 2019/11/21.
+//  Copyright © 2019 Swift. All rights reserved.
 //
 
 import UIKit
 
 class AddItemTableViewCell: UITableViewCell, UITextFieldDelegate {
 
-    @IBOutlet weak var nameTextFiled: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        nameTextFiled.delegate = self;
+        
+        nameTextField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,8 +33,10 @@ class AddItemTableViewCell: UITableViewCell, UITextFieldDelegate {
     }
     
     @IBAction func addItem(_ sender: UIButton) {
-        let newName = nameTextFiled.text
-        nameTextFiled.text = ""
-        nameTextFiled.resignFirstResponder()
+        let newName = nameTextField.text
+        nameTextField.text = ""
+        nameTextField.resignFirstResponder()
+        print(newName)
     }
+    
 }

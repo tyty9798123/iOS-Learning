@@ -14,14 +14,13 @@ class TestTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.isEditing = true;
-        
+        self.tableView.register(
+               UINib(nibName: "AddItemTableViewCell", bundle: nil),
+               forCellReuseIdentifier: "AddItemTableViewCell")
         self.tableView.register(
             UINib(nibName: "PBTestTableViewCell", bundle: nil),
             forCellReuseIdentifier: "reuseIdentifier")
         
-        self.tableView.register(
-        UINib(nibName: "AddItemTableViewCell", bundle: nil),
-        forCellReuseIdentifier: "AddItemTableViewCell")
         
          // self.tableView.backgroundColor = .blue;
         // Uncomment the following line to preserve selection between presentations
@@ -102,13 +101,13 @@ class TestTableViewController: UITableViewController {
             if let addItemCell = cell as? AddItemTableViewCell{
                 // 取得當前 textFiled 的 值
                 // 先用 if let 確定他有 值
-                if let newNmae = addItemCell.nameTextFiled.text{
+                if let newNmae = addItemCell.nameTextField.text{
                     array.append(newNmae)
 
                     tableView.insertRows(
                         at: [IndexPath(item: array.count-1, section: 1)],
                         with: .automatic)
-                    addItemCell.nameTextFiled.text = nil //清空
+                    addItemCell.nameTextField.text = nil //清空
                 }
                 
             }
