@@ -12,7 +12,7 @@ class ImageTestController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "ImageTest"
     }
     
     @IBAction func imageClicked(_ sender: UIButton) {
@@ -24,4 +24,13 @@ class ImageTestController: UIViewController {
         }
     }
     
+    @IBAction func goBackToRootViewController(_ sender: UIButton) {
+        // popViewController 回到上一層 = back
+        //self.navigationController?.popViewController(animated: true)
+        // 直接跳回 root
+        // 第一種方法
+        // self.navigationController?.popToViewController(self.navigationController!.viewControllers[0],animated: true)
+        // 第二種方法
+        self.navigationController?.popToRootViewController(animated: true)
+    }
 }

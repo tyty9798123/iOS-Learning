@@ -40,6 +40,9 @@ class TwoTableViewVIewControllerViewController: UIViewController, UITableViewDel
         updateCount();
     }
     
+    @IBAction func dismissBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if tableView == topTableView{
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddItemTableViewCell", for: indexPath) as! AddItemTableViewCell
